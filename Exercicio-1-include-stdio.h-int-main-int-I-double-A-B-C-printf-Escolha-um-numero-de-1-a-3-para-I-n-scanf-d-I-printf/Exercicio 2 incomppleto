@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	
+	char op;
+	int A, B;
+	double C, D;
+	
+	printf("Escolha um operador +, -, *, /, ^, V, %, S, C:\n");
+	scanf("%s", &op);
+	
+	printf("Digite dois valores inteiros para A e B:\n");
+	scanf("%d %d", &A, &B);
+	
+	printf("Digite dois valores reais para C e D:\n");
+	scanf("%lf %lf", &C, &D);
+	
+	switch(op){
+		
+		case '+':
+			printf("Soma: %d", A+B);
+		break;
+		
+		case '-':
+			printf("Subtraçao: %d", A-B);
+		break;
+		
+		case '*':
+			printf("Multiplicaçao: %d", A*B);
+		break;
+		
+		case '/':
+			printf("Divisão: %.2lf", C/D);
+		break;
+		
+		case '^':
+			printf("Potenciaçao:  %d", pow(A, B));
+		break;
+		
+		case 'V':
+			printf("Raiz quadrada: %d", sqrt(A));
+		break;
+		
+		case '%':
+			printf("Mod: %d", A%B);
+		break;
+		
+		case 'S':
+			printf("Seno: %lf", sin(C));
+		break;
+		
+		case 'C':
+			printf("Coseno: %lf", cos(D));
+		break;
+		
+		default:
+			printf("Ocorreu um erro durante a operaçao");
+		break;
+		
+	}
+	
+	return 0;
+	
+}
